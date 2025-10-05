@@ -9,7 +9,8 @@ venv.bak/
 
 # Python # 
 *.py[cod] 
-*$py.class 
+*$py.class
+__pycache__/ 
 
 # pyenv 
 .python-version 
