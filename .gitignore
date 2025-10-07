@@ -25,3 +25,6 @@ __pycache__/
 
 # Playwright #
 browser-state.json
+
+# Pytest #
+.pytest_cache/
