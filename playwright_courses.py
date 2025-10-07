@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 
 
 with sync_playwright() as playwright:
@@ -30,7 +30,7 @@ with sync_playwright() as playwright:
 
     context.storage_state(path="browser-state.json")
 
-    page.wait_for_timeout(3000)  # для демонстрации результата
+    page.wait_for_timeout(2000)  # для демонстрации результата
 
 
 with sync_playwright() as playwright:
@@ -39,7 +39,26 @@ with sync_playwright() as playwright:
     page = context.new_page()
 
     page.goto(
-        "https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/dashboard"
+        "https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses"
+    )
+
+    courses_list_title = page.get_by_test_id("courses-list-toolbar-title-text")
+    expect(courses_list_title).to_be_visible()
+    expect(courses_list_title).to_have_text("Courses")
+
+    courses_list_empty_icon = page.get_by_test_id("courses-list-empty-view-icon")
+    expect(courses_list_empty_icon).to_be_visible()
+
+    courses_list_empty_title = page.get_by_test_id("courses-list-empty-view-title-text")
+    expect(courses_list_empty_title).to_be_visible()
+    expect(courses_list_empty_title).to_have_text("There is no results")
+
+    courses_list_empty_description = page.get_by_test_id(
+        "courses-list-empty-view-description-text"
+    )
+    expect(courses_list_empty_description).to_be_visible()
+    expect(courses_list_empty_description).to_have_text(
+        "Results from the load test pipeline will be displayed here"
     )
 
     page.wait_for_timeout(5000)  # для демонстрации результата
