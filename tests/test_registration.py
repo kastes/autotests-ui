@@ -1,6 +1,10 @@
-from playwright.sync_api import sync_playwright, expect
+import pytest
+
+from playwright.sync_api import expect, sync_playwright
 
 
+@pytest.mark.regression
+@pytest.mark.registration
 def test_succesfull_registration():
 
     with sync_playwright() as playwright:
