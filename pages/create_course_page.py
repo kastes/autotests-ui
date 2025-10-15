@@ -80,8 +80,8 @@ class CreateCoursePage(BasePage):
     def check_visible_image_preview_empty_view(self):
         expect(self.preview_empty_view_icon).to_be_visible()
 
-        expect(self.preview_image_upload_title).to_be_visible()
-        expect(self.preview_image_upload_title).to_have_text("No image selected")
+        expect(self.preview_empty_view_title).to_be_visible()
+        expect(self.preview_empty_view_title).to_have_text("No image selected")
 
         expect(self.preview_empty_view_description).to_be_visible()
         expect(self.preview_empty_view_description).to_have_text("Preview of selected image will be displayed here")
