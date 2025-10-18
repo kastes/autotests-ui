@@ -2,7 +2,7 @@ from playwright.sync_api import expect, Page
 
 from components.navigation.navbar_component import NavbarComponent
 from components.navigation.sidebar_component import SideBarComponent
-from components.views.empty_view_component import EmptyViewComponent
+from components.views.image_upload_widget_component import EmptyViewComponent, ImageUploadWidgetComponent
 from pages.base_page import BasePage
 
 
@@ -12,32 +12,12 @@ class CreateCoursePage(BasePage):
 
         self.navbar = NavbarComponent(page)
         self.sidebar = SideBarComponent(page)
-        self.preview_empty_view = EmptyViewComponent(page, identifier="create-course-preview")
+        self.image_upload_widget = ImageUploadWidgetComponent(page, identifier="create-course-preview")
         self.exercises_empty_view = EmptyViewComponent(page, identifier="create-course-exercises")
 
         # заголовок и кнопка создания курса
         self.create_course_title = page.get_by_test_id("create-course-toolbar-title-text")
         self.create_course_button = page.get_by_test_id("create-course-toolbar-create-course-button")
-
-        # блок предварительного просмотра изображения курса в состоянии "изображение выбрано"
-        self.preview_image = page.get_by_test_id("create-course-preview-image-upload-widget-preview-image")
-
-        # блок загрузки изображения курса в состоянии "изображение не выбрано"
-        self.preview_image_upload_icon = page.get_by_test_id("create-course-preview-image-upload-widget-info-icon")
-        self.preview_image_upload_title = page.get_by_test_id(
-            "create-course-preview-image-upload-widget-info-title-text"
-        )
-        self.preview_image_upload_description = page.get_by_test_id(
-            "create-course-preview-image-upload-widget-info-description-text"
-        )
-        self.preview_image_upload_button = page.get_by_test_id(
-            "create-course-preview-image-upload-widget-upload-button"
-        )
-        self.preview_image_upload_input = page.get_by_test_id("create-course-preview-image-upload-widget-input")
-        # блок загрузки изображения курса в состоянии "изображение выбрано"
-        self.preview_image_remove_button = page.get_by_test_id(
-            "create-course-preview-image-upload-widget-remove-button"
-        )
 
         # форма создания курса
         self.create_course_title_input = page.get_by_test_id("create-course-form-title-input").locator("//input")
@@ -74,34 +54,6 @@ class CreateCoursePage(BasePage):
 
     def click_create_course_button(self):
         self.create_course_button.click()
-
-    def check_visible_image_preview_empty_view(self):
-        self.preview_empty_view.check_visible(
-            title="No image selected", description="Preview of selected image will be displayed here"
-        )
-
-    def check_visible_preview_image(self):
-        expect(self.preview_image).to_be_visible()
-
-    def check_visible_image_upload_view(self, is_image_uploaded: bool = False):
-        expect(self.preview_image_upload_icon).to_be_visible()
-
-        expect(self.preview_image_upload_title).to_be_visible()
-        expect(self.preview_image_upload_title).to_have_text('Tap on "Upload image" button to select file')
-
-        expect(self.preview_image_upload_description).to_be_visible()
-        expect(self.preview_image_upload_description).to_have_text("Recommended file size 540X300")
-
-        expect(self.preview_image_upload_button).to_be_visible()
-
-        if is_image_uploaded:
-            expect(self.preview_image_remove_button).to_be_visible()
-
-    def click_remove_image_button(self):
-        self.preview_image_remove_button.click()
-
-    def upload_preview_image(self, filename: str):
-        self.preview_image_upload_input.set_input_files(filename)
 
     def check_visible_create_course_form(
         self, title: str, estimated_time: str, description: str, max_score: str, min_score: str
