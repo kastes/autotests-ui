@@ -3,6 +3,7 @@ from playwright.sync_api import expect, Page
 from components.navigation.navbar_component import NavbarComponent
 from components.navigation.sidebar_component import SideBarComponent
 from components.views.image_upload_widget_component import EmptyViewComponent, ImageUploadWidgetComponent
+from components.courses.create_course_exercise_form_component import CreateCourseExerciseFormComponent
 from pages.base_page import BasePage
 
 
@@ -12,6 +13,7 @@ class CreateCoursePage(BasePage):
 
         self.navbar = NavbarComponent(page)
         self.sidebar = SideBarComponent(page)
+        self.create_course_exercise_form = CreateCourseExerciseFormComponent(page)
         self.image_upload_widget = ImageUploadWidgetComponent(page, identifier="create-course-preview")
         self.exercises_empty_view = EmptyViewComponent(page, identifier="create-course-exercises")
 
@@ -33,14 +35,6 @@ class CreateCoursePage(BasePage):
         # блок добавления упражнений
         self.exercises_title = page.get_by_test_id("create-course-exercises-box-toolbar-title-text")  # Exercises
         self.create_exercise_button = page.get_by_test_id("create-course-exercises-box-toolbar-create-exercise-button")
-
-        # self.exercise_subtitle  = page.get_by_test_id("create-course-exercise-0-box-toolbar-subtitle-text")
-        # self.delete_exercise_button = page.get_by_test_id(
-        #   "create-course-exercise-0-box-toolbar-delete-exercise-button"
-        # )
-        # и т.д.
-        # test-id динамические, есть цифры! Пока будем инициализировать локаторы внутри методов класса.
-        #  Это не рекомендуется. Будет исправлено применением паттерна PageFactory
 
     def check_visible_create_course_title(self):
         expect(self.create_course_title).to_be_visible()
@@ -105,57 +99,3 @@ class CreateCoursePage(BasePage):
         self.exercises_empty_view.check_visible(
             title="There is no exercises", description='Click on "Create exercise" button to create new exercise'
         )
-
-    def click_delete_exercise_button(self, index: int):
-        # Обратите внимание, что локатор инициализируется непосредственно в методе.
-        # Это временное решение, так как с классическим подходом POM сложно работать с динамическими локаторами.
-        # В текущей реализации мы не можем заранее объявить локатор на уровне класса, поскольку его значение
-        # зависит от переданного индекса.
-        # В дальнейшем мы будем использовать паттерн PageFactory для более удобной обработки таких случаев
-        # и динамических элементов на странице.
-        delete_exercise_button = self.page.get_by_test_id(
-            f"create-course-exercise-{index}-box-toolbar-delete-exercise-button"
-        )
-        delete_exercise_button.click()
-
-    def check_visible_create_exercise_form(self, index: int, title: str, description: str):
-        # Обратите внимание, что локатор инициализируется непосредственно в методе.
-        # Это временное решение, так как с классическим подходом POM сложно работать с динамическими локаторами.
-        # В текущей реализации мы не можем заранее объявить локатор на уровне класса, поскольку его значение
-        # зависит от переданного индекса.
-        # В дальнейшем мы будем использовать паттерн PageFactory для более удобной обработки таких случаев
-        # и динамических элементов на странице.
-        exercise_subtitle = self.page.get_by_test_id(f"create-course-exercise-{index}-box-toolbar-subtitle-text")
-        expect(exercise_subtitle).to_be_visible()
-        expect(exercise_subtitle).to_have_text(f"#{index+1} Exercise")
-
-        exercise_title_input = self.page.get_by_test_id(f"create-course-exercise-form-title-{index}-input").locator(
-            "input"
-        )
-        expect(exercise_title_input).to_be_visible()
-        expect(exercise_title_input).to_have_value(title)
-
-        exercise_description_input = self.page.get_by_test_id(
-            f"create-course-exercise-form-description-{index}-input"
-        ).locator("input")
-        expect(exercise_description_input).to_be_visible()
-        expect(exercise_description_input).to_have_value(description)
-
-    def fill_create_exercise_form(self, index: int, title: str, description: str):
-        # Обратите внимание, что локатор инициализируется непосредственно в методе.
-        # Это временное решение, так как с классическим подходом POM сложно работать с динамическими локаторами.
-        # В текущей реализации мы не можем заранее объявить локатор на уровне класса, поскольку его значение
-        # зависит от переданного индекса.
-        # В дальнейшем мы будем использовать паттерн PageFactory для более удобной обработки таких случаев
-        # и динамических элементов на странице.
-        exercise_title_input = self.page.get_by_test_id(f"create-course-exercise-form-title-{index}-input").locator(
-            "input"
-        )
-        exercise_title_input.fill(title)
-        expect(exercise_title_input).to_have_value(title)
-
-        exercise_description_input = self.page.get_by_test_id(
-            f"create-course-exercise-form-description-{index}-input"
-        ).locator("input")
-        exercise_description_input.fill(description)
-        expect(exercise_description_input).to_have_value(description)
