@@ -23,8 +23,7 @@ def test_create_course(create_course_page: CreateCoursePage, courses_list_page: 
     courses_list_page.navbar.check_visible("username")
     courses_list_page.sidebar.check_visible()
 
-    create_course_page.check_visible_create_course_title()  # 2
-    create_course_page.check_disabled_create_course_button()  # 3
+    create_course_page.toolbar_view.check_visible()  # 2
 
     create_course_page.image_upload_widget.check_visible(is_image_uploaded=False)
 
@@ -43,7 +42,9 @@ def test_create_course(create_course_page: CreateCoursePage, courses_list_page: 
     create_course_page.create_course_form.fill(
         title="Playwright", estimated_time="2 weeks", description="Playwright", max_score="100", min_score="10"
     )  # 12
-    create_course_page.click_create_course_button()  # 13
+
+    create_course_page.toolbar_view.check_visible(is_create_course_disabled=False)  # 2
+    create_course_page.toolbar_view.click_create_course_button()  # 13
 
     courses_list_page.toolbar_view.check_visible()
     courses_list_page.course_view.check_visible(
