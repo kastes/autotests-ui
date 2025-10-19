@@ -1,7 +1,7 @@
 import pytest
 
-from pages.create_course_page import CreateCoursePage
 from pages.courses_list_page import CoursesListPage
+from pages.create_course_page import CreateCoursePage
 
 
 @pytest.mark.regression
@@ -29,7 +29,7 @@ def test_create_course(create_course_page: CreateCoursePage, courses_list_page: 
 
     create_course_page.create_course_form.check_visible(
         title="", estimated_time="", description="", max_score="0", min_score="0"
-    )  # 6
+    )
     create_course_page.create_exercises_toolbar_view.check_visible()
 
     create_course_page.check_visible_exercises_empty_view()
@@ -40,7 +40,7 @@ def test_create_course(create_course_page: CreateCoursePage, courses_list_page: 
 
     create_course_page.create_course_form.fill(
         title="Playwright", estimated_time="2 weeks", description="Playwright", max_score="100", min_score="10"
-    )  # 12
+    )
 
     create_course_page.create_course_toolbar_view.check_visible(is_create_course_disabled=False)
     create_course_page.create_course_toolbar_view.click_create_course_button()
