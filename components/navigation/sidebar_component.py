@@ -4,7 +4,7 @@ from components.base_component import BaseComponent
 from components.navigation.sidebar_list_item_component import SidebarListItemComponent
 
 
-class SideBarComponent(BaseComponent):
+class SidebarComponent(BaseComponent):
     def __init__(self, page):
         super().__init__(page)
 
