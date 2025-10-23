@@ -1,6 +1,7 @@
 import allure
 import pytest
 
+from allure_commons.types import Severity
 from pages.dashboard.dashboard_page import DashboardPage
 from tools.allure.epics import AllureEpic
 from tools.allure.features import AllureFeature
@@ -16,6 +17,7 @@ from tools.allure.tags import AllureTag
 @allure.tag(AllureTag.REGRESSION, AllureTag.DASHBOARD)
 class TestDashboard:
     @allure.title("Displaying dashboard")
+    @allure.severity(Severity.NORMAL)
     def test_dashboard_displaying(self, dashboard_page_with_state: DashboardPage):
         dashboard_page_with_state.visit(
             "https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/dashboard"

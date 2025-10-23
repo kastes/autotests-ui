@@ -1,6 +1,7 @@
 import allure
 import pytest
 
+from allure_commons.types import Severity
 from pages.authentication.login_page import LoginPage
 from pages.authentication.registration_page import RegistrationPage
 from pages.dashboard.dashboard_page import DashboardPage
@@ -18,6 +19,7 @@ from tools.allure.tags import AllureTag
 @allure.tag(AllureTag.REGRESSION, AllureTag.REGISTRATION)
 class TestRegistration:
     @allure.title("Registration with correct email, username and password")
+    @allure.severity(Severity.CRITICAL)
     def test_succesfull_registration(self, registration_page: RegistrationPage, dashboard_page: DashboardPage):
         registration_page.visit(
             "https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration"
@@ -32,6 +34,7 @@ class TestRegistration:
 
     @allure.tag(AllureTag.NAVIGATION)
     @allure.title("Navigation from registration page to login page")
+    @allure.severity(Severity.NORMAL)
     def test_navigate_from_registration_to_authorization(
         self, login_page: LoginPage, registration_page: RegistrationPage
     ):

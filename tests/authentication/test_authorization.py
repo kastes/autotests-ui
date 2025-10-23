@@ -1,6 +1,7 @@
 import allure
 import pytest
 
+from allure_commons.types import Severity
 from pages.authentication.login_page import LoginPage
 from pages.authentication.registration_page import RegistrationPage
 from pages.dashboard.dashboard_page import DashboardPage
@@ -19,6 +20,7 @@ from tools.allure.tags import AllureTag
 class TestAuthorization:
     @allure.tag(AllureTag.USER_LOGIN)
     @allure.title("User login with correct email and password")
+    @allure.severity(Severity.BLOCKER)
     def test_succesfull_authorization(
         self, registration_page: RegistrationPage, login_page: LoginPage, dashboard_page: DashboardPage
     ):
@@ -50,6 +52,7 @@ class TestAuthorization:
     )
     @allure.tag(AllureTag.USER_LOGIN)
     @allure.title("User login with wrong email or password")
+    @allure.severity(Severity.CRITICAL)
     def test_wrong_email_or_password_authorization(self, login_page: LoginPage, email: str, password: str):
         login_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login")
         login_page.login_form.check_visible()
@@ -60,6 +63,7 @@ class TestAuthorization:
 
     @allure.tag(AllureTag.NAVIGATION)
     @allure.title("Navigation from login page to registration page")
+    @allure.severity(Severity.NORMAL)
     def test_navigate_from_authorization_to_registration(
         self, login_page: LoginPage, registration_page: RegistrationPage
     ):
