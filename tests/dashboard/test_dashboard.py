@@ -14,6 +14,9 @@ from tools.allure.tags import AllureTag
 @allure.epic(AllureEpic.LMS)
 @allure.feature(AllureFeature.DASHBOARD)
 @allure.story(AllureStory.DASHBOARD)
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeature.DASHBOARD)
+@allure.sub_suite(AllureStory.DASHBOARD)
 @allure.tag(AllureTag.REGRESSION, AllureTag.DASHBOARD)
 class TestDashboard:
     @allure.title("Displaying dashboard")
