@@ -28,3 +28,7 @@ browser-state.json
 
 # Pytest #
 .pytest_cache/
+
+# Allure Report
+allure-results/
+allure-report/
