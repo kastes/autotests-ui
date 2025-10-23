@@ -3,11 +3,17 @@ import pytest
 
 from pages.courses.courses_list_page import CoursesListPage
 from pages.courses.create_course_page import CreateCoursePage
+from tools.allure.epics import AllureEpic
+from tools.allure.features import AllureFeature
+from tools.allure.stories import AllureStory
 from tools.allure.tags import AllureTag
 
 
 @pytest.mark.regression
 @pytest.mark.courses
+@allure.epic(AllureEpic.LMS)
+@allure.feature(AllureFeature.COURSES)
+@allure.story(AllureStory.COURSES)
 @allure.tag(AllureTag.REGRESSION, AllureTag.COURSES)
 class TestCourses:
     @allure.title("Displaying of empty courses list")
