@@ -1,3 +1,5 @@
+import allure
+
 from playwright.sync_api import Page
 
 from components.base_component import BaseComponent
@@ -32,6 +34,7 @@ class ImageUploadWidgetComponent(BaseComponent):
         # блок загрузки изображения курса в состоянии "изображение выбрано"
         self.remove_button = Button(page, f"{identifier}-image-upload-widget-remove-button", "Remove image")
 
+    @allure.step("Check visible image upload widget")
     def check_visible(self, is_image_uploaded: bool = False):
         self.image_upload_info_icon.check_visible()
 
