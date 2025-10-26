@@ -1,5 +1,7 @@
 import re
 
+import allure
+
 from components.base_component import BaseComponent
 from components.navigation.sidebar_list_item_component import SidebarListItemComponent
 
@@ -12,6 +14,7 @@ class SidebarComponent(BaseComponent):
         self.courses_list_item = SidebarListItemComponent(page, "courses")
         self.logout_list_item = SidebarListItemComponent(page, "logout")
 
+    @allure.step("Check visible sidebar")
     def check_visible(self):
         self.dashboard_list_item.check_visible("Dashboard")
         self.courses_list_item.check_visible("Courses")
