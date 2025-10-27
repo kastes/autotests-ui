@@ -26,6 +26,9 @@ __pycache__/
 # Playwright #
 browser-state.json
 
+# Playwrght Trace Viewer
+tracing/
+
 # Pytest #
 .pytest_cache/
 
