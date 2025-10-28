@@ -28,7 +28,8 @@ print(user1.username, user1.is_active)
 print()
 
 user_data2 = {"id": 2, "username": "Foma", "email": "foma@mail", "is_active": False}
-user2 = User(**user_data2)  # mypy не может проверить типы и выдаёт предупреждение. Выполняется нормально
+# mypy не может проверить типы и выдаёт предупреждение. Выполняется нормально
+user2 = User(**user_data2)  # type: ignore
 print(user2)
 print(user2.username, user2.is_active)
 print()
@@ -40,7 +41,8 @@ print()
 
 
 user_data4 = {"id": "three", "username": "Egor", "email": "egor@ya"}
-user4 = User(**user_data4)  # mypy не может проверить типы и выдаёт предупреждение. Ошибка при выполнении
+# mypy не может проверить типы и выдаёт предупреждение. Ошибка при выполнении
+user4 = User(**user_data4)  # type: ignore
 print(user4)
 print(user4.username, user4.is_active)
 print()
