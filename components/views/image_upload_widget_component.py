@@ -1,4 +1,6 @@
+from pathlib import Path
 import allure
+
 
 from playwright.sync_api import Page
 
@@ -57,5 +59,5 @@ class ImageUploadWidgetComponent(BaseComponent):
     def click_remove_image_button(self):
         self.remove_button.click()
 
-    def upload_preview_image(self, filename: str):
+    def upload_preview_image(self, filename: str | Path):
         self.upload_input.set_input_files(filename)

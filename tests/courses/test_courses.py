@@ -51,7 +51,7 @@ class TestCourses:
 
         create_course_page.check_visible_exercises_empty_view()
 
-        create_course_page.image_upload_widget.upload_preview_image("./testdata/files/playwright-logo.png")
+        create_course_page.image_upload_widget.upload_preview_image(settings.test_data.image_png_file)
 
         create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
 
@@ -72,7 +72,7 @@ class TestCourses:
     def test_edit_course(self, create_course_page: CreateCoursePage, courses_list_page: CoursesListPage):
         create_course_page.visit(AppRoute.COURSES_CREATE)
         create_course_page.image_upload_widget.check_visible(is_image_uploaded=False)
-        create_course_page.image_upload_widget.upload_preview_image("./testdata/files/python-logo.jpeg")
+        create_course_page.image_upload_widget.upload_preview_image(settings.test_data.image_jpg_file)
         create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
         create_course_page.create_course_form.fill(
             title="Python", estimated_time="6 months", description="Python language", max_score="1000", min_score="900"
@@ -86,7 +86,7 @@ class TestCourses:
         courses_list_page.course_view.menu.check_visible(index=0)
         courses_list_page.course_view.menu.click_edit(index=0)
 
-        create_course_page.image_upload_widget.upload_preview_image("./testdata/files/playwright-logo.png")
+        create_course_page.image_upload_widget.upload_preview_image(settings.test_data.image_png_file)
         create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
         create_course_page.create_course_form.fill(
             title="Playwright",
