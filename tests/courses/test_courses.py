@@ -2,6 +2,7 @@ import allure
 import pytest
 
 from allure_commons.types import Severity
+from config import settings
 from pages.courses.courses_list_page import CoursesListPage
 from pages.courses.create_course_page import CreateCoursePage
 from tools.routes import AppRoute
@@ -26,7 +27,7 @@ class TestCourses:
     def test_empty_courses_list(self, courses_list_page: CoursesListPage):
         courses_list_page.visit(AppRoute.COURSES)
 
-        courses_list_page.navbar.check_visible("username")
+        courses_list_page.navbar.check_visible(settings.test_user.username)
         courses_list_page.sidebar.check_visible()
         courses_list_page.toolbar_view.check_visible()
         courses_list_page.check_visible_empty_view()
@@ -36,7 +37,7 @@ class TestCourses:
     def test_create_course(self, create_course_page: CreateCoursePage, courses_list_page: CoursesListPage):
         create_course_page.visit(AppRoute.COURSES_CREATE)
 
-        courses_list_page.navbar.check_visible("username")
+        courses_list_page.navbar.check_visible(settings.test_user.username)
         courses_list_page.sidebar.check_visible()
 
         create_course_page.create_course_toolbar_view.check_visible()
