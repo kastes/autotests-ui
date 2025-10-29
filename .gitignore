@@ -32,5 +32,6 @@ browser-state.json
 # Allure Report
 allure-results/
 allure-report/
+artifacts/
 tracing/
 videos/
