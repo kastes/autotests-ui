@@ -56,5 +56,8 @@ class Settings(BaseSettings):
             videos_dir=videos_dir, tracing_dir=tracing_dir, browser_state_file=browser_state_file
         )  # type: ignore[call-arg] # mypy выдаёт предупреждение :(
 
+    def get_base_url(self) -> str:
+        return f"{self.app_url}/"
+
 
 settings = Settings.initialize()
