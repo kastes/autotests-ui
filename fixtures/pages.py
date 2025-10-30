@@ -10,30 +10,30 @@ from pages.dashboard.dashboard_page import DashboardPage
 
 
 @pytest.fixture
-def login_page(chromium_page: Page) -> LoginPage:
-    return LoginPage(chromium_page)
+def login_page(browser_page: Page) -> LoginPage:
+    return LoginPage(browser_page)
 
 
 @pytest.fixture
-def registration_page(chromium_page: Page) -> RegistrationPage:
-    return RegistrationPage(chromium_page)
+def registration_page(browser_page: Page) -> RegistrationPage:
+    return RegistrationPage(browser_page)
 
 
 @pytest.fixture
-def dashboard_page(chromium_page: Page) -> DashboardPage:
-    return DashboardPage(chromium_page)
+def dashboard_page(browser_page: Page) -> DashboardPage:
+    return DashboardPage(browser_page)
 
 
 @pytest.fixture
-def dashboard_page_with_state(chromium_page_with_state: Page) -> DashboardPage:
-    return DashboardPage(chromium_page_with_state)
+def dashboard_page_with_state(browser_page_with_state: Page) -> DashboardPage:
+    return DashboardPage(browser_page_with_state)
 
 
 @pytest.fixture
-def courses_list_page(chromium_page_with_state: Page) -> CoursesListPage:
-    return CoursesListPage(chromium_page_with_state)
+def courses_list_page(browser_page_with_state: Page) -> CoursesListPage:
+    return CoursesListPage(browser_page_with_state)
 
 
 @pytest.fixture
-def create_course_page(chromium_page_with_state: Page) -> CreateCoursePage:
-    return CreateCoursePage(chromium_page_with_state)
+def create_course_page(browser_page_with_state: Page) -> CreateCoursePage:
+    return CreateCoursePage(browser_page_with_state)
