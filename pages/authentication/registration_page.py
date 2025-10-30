@@ -9,6 +9,7 @@ from elements.button import Button
 from elements.link import Link
 from elements.text import Text
 from pages.base_page import BasePage
+from tools.routes import AppRoute
 
 
 class RegistrationPage(BasePage):
@@ -29,7 +30,7 @@ class RegistrationPage(BasePage):
     @allure.step("Navigate from registration page to login page")
     def click_login_link(self):
         self.login_link.click()
-        self.check_current_url(re.compile(r".*/#/auth/login"))
+        self.check_current_url(re.compile(AppRoute.LOGIN))
 
     @allure.step("Check visible user already exists alert")
     def check_visible_user_already_exists_alert(self):
