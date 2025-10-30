@@ -23,6 +23,7 @@ from tools.allure.tags import AllureTag
 @allure.sub_suite(AllureStory.REGISTRATION)
 @allure.tag(AllureTag.REGRESSION, AllureTag.REGISTRATION)
 class TestRegistration:
+    @pytest.mark.xdist_group(name="authorization-group")
     @allure.title("Registration with correct email, username and password")
     @allure.severity(Severity.CRITICAL)
     def test_succesfull_registration(self, registration_page: RegistrationPage, dashboard_page: DashboardPage):
