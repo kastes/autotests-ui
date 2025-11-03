@@ -37,6 +37,7 @@ class Settings(BaseSettings):
     browsers: list[Browser]
     videos_dir: DirectoryPath
     tracing_dir: DirectoryPath
+    allure_results_dir: DirectoryPath
     test_user: TestUser
     test_data: TestData
     browser_state_file: FilePath
@@ -45,15 +46,20 @@ class Settings(BaseSettings):
     def initialize(cls) -> "Settings":
         videos_dir: Path = DirectoryPath("./artifacts/videos")
         tracing_dir: Path = DirectoryPath("./artifacts/tracing")
+        allure_results_dir: Path = DirectoryPath("./allure-results")
         browser_state_file: Path = FilePath("browser-state.json")
 
         # создаём каталоги и файлы если они не существуют
         videos_dir.mkdir(exist_ok=True, parents=True)
         tracing_dir.mkdir(exist_ok=True, parents=True)
+        allure_results_dir.mkdir(exist_ok=True)
         browser_state_file.touch(exist_ok=True)
 
         return Settings(
-            videos_dir=videos_dir, tracing_dir=tracing_dir, browser_state_file=browser_state_file
+            videos_dir=videos_dir,
+            tracing_dir=tracing_dir,
+            allure_results_dir=allure_results_dir,
+            browser_state_file=browser_state_file,
         )  # type: ignore[call-arg] # mypy выдаёт предупреждение :(
 
     def get_base_url(self) -> str:
