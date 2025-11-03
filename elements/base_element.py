@@ -10,7 +10,7 @@ class BaseElement:
         self.page: Page = page
         self.locator: str = locator
         self.name: str = name
-        self.logger = get_logger(self.__class__.__name__)
+        self.logger = get_logger(self.__module__)
 
     @property
     def type_of(self) -> str:

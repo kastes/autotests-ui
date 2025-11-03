@@ -10,7 +10,7 @@ from tools.logger import get_logger
 class BasePage:
     def __init__(self, page: Page):
         self.page = page
-        self.logger = get_logger(self.__class__.__name__)
+        self.logger = get_logger(self.__module__)
 
     def visit(self, url: str):
         step = f'Opening the url: "{url}"'
