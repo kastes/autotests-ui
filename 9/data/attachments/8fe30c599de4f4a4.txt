@@ -1,0 +1,47 @@
+INFO     pages.courses.courses_list_page:base_page.py:18 Opening the url: "AppRoute.COURSES"
+INFO     elements.text:base_element.py:23 Get locator with data-testid="navigation-navbar-app-title-text" at index="0"
+INFO     elements.text:base_element.py:30 Checking that element "Text" with name "App title" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="navigation-navbar-app-title-text" at index="0"
+INFO     elements.text:base_element.py:37 Checking that element "Text" with name "App title" have text "UI Course"
+INFO     elements.text:base_element.py:23 Get locator with data-testid="navigation-navbar-welcome-title-text" at index="0"
+INFO     elements.text:base_element.py:37 Checking that element "Text" with name "Welcome title" have text "Welcome, username!"
+INFO     elements.icon:base_element.py:23 Get locator with data-testid="dashboard-drawer-list-item-icon" at index="0"
+INFO     elements.icon:base_element.py:30 Checking that element "Icon" with name "Dashboard icon" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="dashboard-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:30 Checking that element "Text" with name "Dashboard title" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="dashboard-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:37 Checking that element "Text" with name "Dashboard title" have text "Dashboard"
+INFO     elements.button:base_element.py:23 Get locator with data-testid="dashboard-drawer-list-item-button" at index="0"
+INFO     elements.button:base_element.py:30 Checking that element "Button" with name "Dashboard button" is visible
+INFO     elements.icon:base_element.py:23 Get locator with data-testid="courses-drawer-list-item-icon" at index="0"
+INFO     elements.icon:base_element.py:30 Checking that element "Icon" with name "Courses icon" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="courses-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:30 Checking that element "Text" with name "Courses title" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="courses-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:37 Checking that element "Text" with name "Courses title" have text "Courses"
+INFO     elements.button:base_element.py:23 Get locator with data-testid="courses-drawer-list-item-button" at index="0"
+INFO     elements.button:base_element.py:30 Checking that element "Button" with name "Courses button" is visible
+INFO     elements.icon:base_element.py:23 Get locator with data-testid="logout-drawer-list-item-icon" at index="0"
+INFO     elements.icon:base_element.py:30 Checking that element "Icon" with name "Logout icon" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="logout-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:30 Checking that element "Text" with name "Logout title" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="logout-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:37 Checking that element "Text" with name "Logout title" have text "Logout"
+INFO     elements.button:base_element.py:23 Get locator with data-testid="logout-drawer-list-item-button" at index="0"
+INFO     elements.button:base_element.py:30 Checking that element "Button" with name "Logout button" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="courses-list-toolbar-title-text" at index="0"
+INFO     elements.text:base_element.py:30 Checking that element "Text" with name "Title" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="courses-list-toolbar-title-text" at index="0"
+INFO     elements.text:base_element.py:37 Checking that element "Text" with name "Title" have text "Courses"
+INFO     elements.button:base_element.py:23 Get locator with data-testid="courses-list-toolbar-create-course-button" at index="0"
+INFO     elements.button:base_element.py:30 Checking that element "Button" with name "Create course" is visible
+INFO     elements.icon:base_element.py:23 Get locator with data-testid="courses-list-empty-view-icon" at index="0"
+INFO     elements.icon:base_element.py:30 Checking that element "Icon" with name "Icon" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="courses-list-empty-view-title-text" at index="0"
+INFO     elements.text:base_element.py:30 Checking that element "Text" with name "Title" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="courses-list-empty-view-title-text" at index="0"
+INFO     elements.text:base_element.py:37 Checking that element "Text" with name "Title" have text "There is no results"
+INFO     elements.text:base_element.py:23 Get locator with data-testid="courses-list-empty-view-description-text" at index="0"
+INFO     elements.text:base_element.py:30 Checking that element "Text" with name "Description" is visible
+INFO     elements.text:base_element.py:23 Get locator with data-testid="courses-list-empty-view-description-text" at index="0"
+INFO     elements.text:base_element.py:37 Checking that element "Text" with name "Description" have text "Results from the load test pipeline will be displayed here"
