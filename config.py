@@ -27,7 +27,7 @@ class TestData(BaseModel):
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
         # если определена переменная окружения ENV_FILE, берём её значение. Иначе .env
-        env_file=os.getenv("ENV_FILE", ".env"),
+        env_file=os.getenv("ENV_FILE", ".test.env"),
         env_file_encoding="utf-8",
         env_nested_delimiter=".",
     )
