@@ -23,7 +23,6 @@ def initiliaze_playwright_page(
     yield page
 
     context.tracing.stop(path=settings.tracing_dir.joinpath(f"{test_name}.zip"))
-    browser.close()
 
     allure.attach.file(settings.tracing_dir.joinpath(f"{test_name}.zip"), name="trace", extension="zip")
     if (
@@ -31,3 +30,7 @@ def initiliaze_playwright_page(
     ):  # без этой проверки mypy выдаёт ошибку, т.к. тип свойства page.video - Union[Video, None]. Ещё можно
         # использовать assert page.video is not None или assert isinstance(page.video, Video)
         allure.attach.file(page.video.path(), name="video", attachment_type=AttachmentType.WEBM)
+
+    page.close()
+    context.close()
+    browser.close()

@@ -26,6 +26,8 @@ def initialize_browser_state(playwright: Playwright) -> None:
 
     context.storage_state(path=settings.browser_state_file)
 
+    page.close()
+    context.close()
     browser.close()
 
 
