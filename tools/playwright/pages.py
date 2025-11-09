@@ -23,13 +23,16 @@ def initiliaze_playwright_page(
 
     context.tracing.stop(path=settings.tracing_dir.joinpath(f"{test_name}.zip"))
 
+    page.close()
+    context.close()
+    browser.close()
+
+    # файлы присоединять к отчёту после browser.close(),
+    #  тогда все файлы для присоединения уже сброшены из буферов на диск.
+    #  Иначе могут присоединиться файлы нулевой длины
     allure.attach.file(settings.tracing_dir.joinpath(f"{test_name}.zip"), name="trace", extension="zip")
     if (
         page.video is not None
     ):  # без этой проверки mypy выдаёт ошибку, т.к. тип свойства page.video - Union[Video, None]. Ещё можно
         # использовать assert page.video is not None или assert isinstance(page.video, Video)
         allure.attach.file(page.video.path(), name="video", attachment_type=allure.attachment_type.WEBM)
-
-    page.close()
-    context.close()
-    browser.close()
