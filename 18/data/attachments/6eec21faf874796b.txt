@@ -1,0 +1,107 @@
+INFO     pages.authentication.registration_page:base_page.py:18 Opening the url: "AppRoute.REGISTRATION"
+INFO     elements.input:base_element.py:25 Get locator with data-testid="registration-form-email-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:26 Fill element "Input" with name "Email" to value "user.name@gmail.com"
+INFO     UI_COVERAGE_TRACKER_STORAGE:storage.py:34 Results directory does not exist, creating: /home/runner/work/autotests-ui/autotests-ui/coverage-results
+INFO     elements.input:base_element.py:25 Get locator with data-testid="registration-form-email-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:35 Checking that element "Input" with name "Email" have value "user.name@gmail.com"
+INFO     elements.input:base_element.py:25 Get locator with data-testid="registration-form-username-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:26 Fill element "Input" with name "Username" to value "username"
+INFO     elements.input:base_element.py:25 Get locator with data-testid="registration-form-username-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:35 Checking that element "Input" with name "Username" have value "username"
+INFO     elements.input:base_element.py:25 Get locator with data-testid="registration-form-password-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:26 Fill element "Input" with name "Password" to value "password"
+INFO     elements.input:base_element.py:25 Get locator with data-testid="registration-form-password-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:35 Checking that element "Input" with name "Password" have value "password"
+INFO     elements.button:base_element.py:25 Get locator with data-testid="registration-page-registration-button" at index="0"
+INFO     elements.button:base_element.py:60 Clicking on element "Button" with name "Registration"
+INFO     elements.text:base_element.py:25 Get locator with data-testid="dashboard-toolbar-title-text" at index="0"
+INFO     elements.text:base_element.py:42 Checking that element "Text" with name "Title" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="dashboard-toolbar-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "Title" have text "Dashboard"
+INFO     elements.text:base_element.py:25 Get locator with data-testid="navigation-navbar-app-title-text" at index="0"
+INFO     elements.text:base_element.py:42 Checking that element "Text" with name "App title" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="navigation-navbar-app-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "App title" have text "UI Course"
+INFO     elements.text:base_element.py:25 Get locator with data-testid="navigation-navbar-welcome-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "Welcome title" have text "Welcome, username!"
+INFO     elements.icon:base_element.py:25 Get locator with data-testid="dashboard-drawer-list-item-icon" at index="0"
+INFO     elements.icon:base_element.py:42 Checking that element "Icon" with name "Dashboard icon" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="dashboard-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:42 Checking that element "Text" with name "Dashboard title" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="dashboard-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "Dashboard title" have text "Dashboard"
+INFO     elements.button:base_element.py:25 Get locator with data-testid="dashboard-drawer-list-item-button" at index="0"
+INFO     elements.button:base_element.py:42 Checking that element "Button" with name "Dashboard button" is visible
+INFO     elements.icon:base_element.py:25 Get locator with data-testid="courses-drawer-list-item-icon" at index="0"
+INFO     elements.icon:base_element.py:42 Checking that element "Icon" with name "Courses icon" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="courses-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:42 Checking that element "Text" with name "Courses title" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="courses-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "Courses title" have text "Courses"
+INFO     elements.button:base_element.py:25 Get locator with data-testid="courses-drawer-list-item-button" at index="0"
+INFO     elements.button:base_element.py:42 Checking that element "Button" with name "Courses button" is visible
+INFO     elements.icon:base_element.py:25 Get locator with data-testid="logout-drawer-list-item-icon" at index="0"
+INFO     elements.icon:base_element.py:42 Checking that element "Icon" with name "Logout icon" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="logout-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:42 Checking that element "Text" with name "Logout title" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="logout-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "Logout title" have text "Logout"
+INFO     elements.button:base_element.py:25 Get locator with data-testid="logout-drawer-list-item-button" at index="0"
+INFO     elements.button:base_element.py:42 Checking that element "Button" with name "Logout button" is visible
+INFO     elements.button:base_element.py:25 Get locator with data-testid="logout-drawer-list-item-button" at index="0"
+INFO     elements.button:base_element.py:60 Clicking on element "Button" with name "Logout button"
+INFO     components.navigation.sidebar_list_item_component:base_component.py:17 Checking that current url matches pattern: "AppRoute.LOGIN"
+INFO     elements.input:base_element.py:25 Get locator with data-testid="login-form-email-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:26 Fill element "Input" with name "Email" to value "user.name@gmail.com"
+INFO     elements.input:base_element.py:25 Get locator with data-testid="login-form-email-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:35 Checking that element "Input" with name "Email" have value "user.name@gmail.com"
+INFO     elements.input:base_element.py:25 Get locator with data-testid="login-form-password-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:26 Fill element "Input" with name "Password" to value "password"
+INFO     elements.input:base_element.py:25 Get locator with data-testid="login-form-password-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:35 Checking that element "Input" with name "Password" have value "password"
+INFO     elements.button:base_element.py:25 Get locator with data-testid="login-page-login-button" at index="0"
+INFO     elements.button:base_element.py:60 Clicking on element "Button" with name "Login"
+INFO     elements.text:base_element.py:25 Get locator with data-testid="dashboard-toolbar-title-text" at index="0"
+INFO     elements.text:base_element.py:42 Checking that element "Text" with name "Title" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="dashboard-toolbar-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "Title" have text "Dashboard"
+INFO     elements.text:base_element.py:25 Get locator with data-testid="navigation-navbar-app-title-text" at index="0"
+INFO     elements.text:base_element.py:42 Checking that element "Text" with name "App title" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="navigation-navbar-app-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "App title" have text "UI Course"
+INFO     elements.text:base_element.py:25 Get locator with data-testid="navigation-navbar-welcome-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "Welcome title" have text "Welcome, username!"
+INFO     elements.icon:base_element.py:25 Get locator with data-testid="dashboard-drawer-list-item-icon" at index="0"
+INFO     elements.icon:base_element.py:42 Checking that element "Icon" with name "Dashboard icon" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="dashboard-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:42 Checking that element "Text" with name "Dashboard title" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="dashboard-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "Dashboard title" have text "Dashboard"
+INFO     elements.button:base_element.py:25 Get locator with data-testid="dashboard-drawer-list-item-button" at index="0"
+INFO     elements.button:base_element.py:42 Checking that element "Button" with name "Dashboard button" is visible
+INFO     elements.icon:base_element.py:25 Get locator with data-testid="courses-drawer-list-item-icon" at index="0"
+INFO     elements.icon:base_element.py:42 Checking that element "Icon" with name "Courses icon" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="courses-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:42 Checking that element "Text" with name "Courses title" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="courses-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "Courses title" have text "Courses"
+INFO     elements.button:base_element.py:25 Get locator with data-testid="courses-drawer-list-item-button" at index="0"
+INFO     elements.button:base_element.py:42 Checking that element "Button" with name "Courses button" is visible
+INFO     elements.icon:base_element.py:25 Get locator with data-testid="logout-drawer-list-item-icon" at index="0"
+INFO     elements.icon:base_element.py:42 Checking that element "Icon" with name "Logout icon" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="logout-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:42 Checking that element "Text" with name "Logout title" is visible
+INFO     elements.text:base_element.py:25 Get locator with data-testid="logout-drawer-list-item-title-text" at index="0"
+INFO     elements.text:base_element.py:51 Checking that element "Text" with name "Logout title" have text "Logout"
+INFO     elements.button:base_element.py:25 Get locator with data-testid="logout-drawer-list-item-button" at index="0"
+INFO     elements.button:base_element.py:42 Checking that element "Button" with name "Logout button" is visible

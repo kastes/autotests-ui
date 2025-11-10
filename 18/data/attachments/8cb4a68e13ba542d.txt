@@ -1,0 +1,16 @@
+INFO     pages.authentication.registration_page:base_page.py:18 Opening the url: "AppRoute.REGISTRATION"
+INFO     elements.link:base_element.py:25 Get locator with data-testid="registration-page-login-link" at index="0"
+INFO     elements.link:base_element.py:60 Clicking on element "Link" with name "Login"
+INFO     pages.authentication.registration_page:base_page.py:30 Checking that current url matches pattern: "AppRoute.LOGIN"
+INFO     elements.input:base_element.py:25 Get locator with data-testid="login-form-email-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:base_element.py:42 Checking that element "Input" with name "Email" is visible
+INFO     elements.input:base_element.py:25 Get locator with data-testid="login-form-email-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:35 Checking that element "Input" with name "Email" have value ""
+INFO     elements.input:base_element.py:25 Get locator with data-testid="login-form-password-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:base_element.py:42 Checking that element "Input" with name "Password" is visible
+INFO     elements.input:base_element.py:25 Get locator with data-testid="login-form-password-input" at index="0"
+INFO     elements.input:input.py:15 Get a nested locator "input"
+INFO     elements.input:input.py:35 Checking that element "Input" with name "Password" have value ""
