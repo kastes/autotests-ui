@@ -35,3 +35,9 @@ allure-report/
 artifacts/
 tracing/
 videos/
+
+# ui-coverage-tool
+coverage-results/
+coverage-history.json
+coverage.html
+coverage-report.json
